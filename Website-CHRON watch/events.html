@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Events</title>
+
+        <link rel="stylesheet" href="css/grids.css" >
+        <link rel="stylesheet" href="css/main.css" >
+        <link rel="stylesheet" href="css/normalize.css"> 
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <!-- <FIXED HORIZONTAL NAVIGATION > -->
+    <div class="nav">
+
+                <div class="button-nav grid-col-1of6">
+                      <h1 class="logo"><a href="index.html">CHRON</a></h1>
+                </div>
+
+                <div class="button-nav grid-col-7of12">
+
+                      <div class="button-nav grid-button" >
+                        <a href="product_list.html">Watches</a>
+                      </div> 
+
+                      <div class="button-nav grid-button" >
+                        <a href="events.html">Events</a>
+                      </div>
+
+                      <div class="button-nav grid-button" >
+                        <a href="about_us.html">About</a>
+                      </div>
+
+                      <div class="button-nav grid-button" >
+                        <a href="contact.html">Contact</a>
+                      </div>
+                 </div>
+
+                 <div class="button-nav grid-col-1of6 icon-on-nav ">
+
+                            <div class="shopping-bag">  
+                                <span onclick="openCart()"><img src="img/cart.png" alt="cart-icon" title="Shopping Bag" class="icon"></span> 
+                            </div> 
+
+                            <div class="account-icon">
+                                  <a id="none-a" href="login.html"><img src="img/account.png" alt="account-icon" title="Account" class="icon"></a>
+                            </div> 
+
+                            <div class="search"> 
+                                  <span onclick="openSearch()"><img src="img/search.png" alt="search-icon" class="icon" title="search"></span>
+                            </div>
+                  </div>
+       </div>
+       <!-- <End o FIXED HORIZONTAL NAVIGATION > -->
+
+
+      <section> <!-- sidenave will replace the nav when using smaller screen-->
+          <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <div class="side-nav-small">
+                    <a href="index.html"><h2>CHRON</h2></a>
+                    <a href="product_list.html">Watches</a>
+                    <a href="events.html">Events</a>
+                    <a href="about_us.html">About</a> 
+                    <a href="login.html">Account</a> 
+                    <a href="#"><span onclick="openCart()">Shopping Cart</span></a>
+                </div>
+          </div>
+      </section>
+
+    <section> <!-- search sidebar will appear while clicking the search icon -->
+            <div id="mySearch" class="sidesearch">
+                   <a href="javascript:void(0)" class="closebtn" onclick="closeSearch()">&times;</a>
+                   <h3 class="big-title">Search</h3>
+                   <div class="sideSearch-container">
+                        <form action="#" class="input_form"> 
+                        <h3 id="sideSearch-info">Enter Your Search Below</h3>
+                        <input type="text" name=" 1" Placeholder="New Arrivals" class="input_account"> </form>
+                        <button type="button" class="search-button">Search</button>
+                  </div>
+            </div>
+
+      </section> <!-- End of search sider bar -->
+
+
+            <!-- Use hamburger icon to open the sidenav -->
+            <div class="hamburger">
+                  <span onclick="openNav()"><img src="img/burger.png" alt="hamburger-icon" title="hamburger"></span>
+                  <a href="index.html"><p class="small-logo">CHRON</p></a>
+            </div>
+             
+            <!--  icons with small screen size -->
+            <div class="search-small">  
+                   <span onclick="openSearch()"><img src="img/search.png" class="search" alt="search-icon" title="search"></span> 
+            </div> 
+
+      <!-- side bar shopping cart -->
+      <section> 
+          <div id="myCart" class="sidecart"> 
+                <a href="javascript:void(0)" class="closebtn" onclick="closeCart()">&times;</a> 
+                <h3 class="big-title">Shopping Cart (1)</h3>
+                <div class="sideSearch-container">
+
+                      <div class="cart-small">
+                            <img src="img/PDP_watch_1.jpg"  alt="placeholder image">
+                      </div>
+                      <div class="cart_title">
+                           <h3>Product Name</h3>
+                           <h2 class="price">Rosendahl</h2>
+                      </div>
+
+                      <div class="cart_title">
+                          <h3>Quantity</h3>
+                          <form action="#" class="input_form"> 
+                          <input type="text" name=" 1" Placeholder="1"> </form>
+                      </div>
+
+                      <div class="cart_title" id="price">
+                           <h3>Total Price</h3>
+                           <h2 class="price">165 CAD</h2>
+                      </div>
+
+                      <div id="cart-check-out"> 
+                          <form method="get" action="login.html">
+                          <button type="submit" onclick="login.html" class="">Check Out</button>
+                          </form>
+                      </div>
+
+                  </div>
+            </div>
+       
+      </section>  <!-- End of side bar shopping cart -->
+
+
+
+
+
+  <div class="grid-row">
+            <div class="grid-col-12of12">
+              <h2 class="big-title">Events</h2>
+            </div>
+  </div>
+
+  <section class="events-wrapper">
+        <div class="events-container"> 
+
+            <div class="left-half grid-col-1of2"> 
+              <img src="img/p11.jpg" alt="camera image">
+            </div>
+ 
+
+           <div class="right-half grid-col-1of2">
+                  
+                  <h1>Capture your time</h1>
+                  <p>We proudly present our spring event for CHRON: More than one way to capture time. We know that many of you are fond of capturing precious moments of life and using beautiful tools to make experience joycing. CHRON is interested in knowing how our supporter wearing CHRON while engaging their favorite activities. Participaing in our fan base event to win prizes.</p>
+                
+           </div> 
+        </div>
+
+        <div class="events-container"> 
+
+            <div class="left-half grid-col-1of2"> 
+            <img src="img/skateboard.jpg" alt="camera image">
+            </div>
+ 
+
+           <div class="right-half grid-col-1of2">
+                  
+                  <h1>Summer CHRON 2017 in Vancouver, BC</h1>
+                  <p>CHRON streets is coming to Vancouver! Our chief designer/professional skateboarder Rex Shreen is coming to Vancouver this July bringing his design talk exciting moves to our millennial supports. please RSVP.</p>
+                
+           </div> 
+        </div>
+
+        <div class="events-container">
+
+             <div class="left-half grid-col-1of2"> 
+              <img src="img/mountain.jpg" alt="camera image">
+            </div>
+ 
+
+           <div class="right-half grid-col-1of2">
+                  <h1>CHRON’s new Mountain collection is comming soon</h1>
+                  <p>Inspired by Himalayas.The Himalayas stretch across the northeastern portion of India. The desinger from India integrated his interpretation of Himalayas for the new mountain 
+                  collection series.</p>
+                 
+           </div>
+      </div> 
+
+  </section>
+
+
+
+<!-- !-- Footer Content-->      
+       <section>
+             <div class="grid-row">
+                   <div class="grid-col-12of12 grey-bg">
+                           <ul class="footer-ul">
+                                <li class="footer-component"><a href = "#">FQA</a></li>
+                                <li class="footer-component"><a href = "#">RETURNS</a></li>
+                                <li class="footer-component"><a href = "#">SHIPPING</a></li>
+                                <li class="footer-component"><a href = "#">CONTACT</a></li>
+                                <li class="footer-component"><a href = "#">STORE FINDER</a></li>
+                           </ul>
+                    </div>
+
+                          <div class="grid-col-12of12 grey-bg">
+                      <div class= "footer-icons">
+                          <div class="center-container">
+                              <div class="icon">
+                                <img src="img/FacebookFilled.png" alt="fb-icon" title="facebook-icon">
+                              </div>
+                              <div class="icon">
+                                <img src="img/InstagramFilled.png" alt="ins-icon" title="instagram-icon">
+                              </div>
+
+                              <div class="icon">
+                                <img src="img/SnapchatFilled.png" alt="snap-icon" title="snapchat-icon">
+                              </div>
+
+                              <div class="icon">
+                                <img src="img/PinterestFilled.png" alt="pin-icon" title="pinterest-icon">
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+
+
+                     <div class="grid-col-12of12 grey-bg">       
+                           <ul class="footer-ul">
+                              <li class="footer-reference"><a href="http://www.sfu.ca/~vji/IAT339/styleguide_CHRON/styleguide_CHRON.html">STYLE GUIDE</a></li>
+                              <li class="footer-reference">|</li>
+                              <li class="footer-reference"><a href="citation.html">CITATIONS</a></li>
+                              <li class="footer-reference">|</li>
+                       
+                              <li class="footer-reference"><a href="http://github.com/vic339/PO2">REPOSITORY</a></li>
+                           </ul>
+                      </div>
+
+             </div> 
+
+             <!-- icons for social media -->
+             
+             
+               
+
+              <!--  content for Andrew and Ethan -->
+              
+                   
+              
+
+          </section> 
+          <!-- End of Footer Content-->   
+    <script src="js/sidebar.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

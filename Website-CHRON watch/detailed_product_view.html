@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Rosendahl-Product Detail</title>
+
+        <link rel="stylesheet" href="css/grids.css" >
+        <link rel="stylesheet" href="css/main.css" >
+        <link rel="stylesheet" href="css/normalize.css"> 
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <!-- <FIXED HORIZONTAL NAVIGATION > -->
+    <div class="nav">
+
+                <div class="button-nav grid-col-1of6">
+                      <h1 class="logo"><a href="index.html">CHRON</a></h1>
+                </div>
+
+                <div class="button-nav grid-col-7of12">
+
+                      <div class="button-nav grid-button" >
+                        <a href="product_list.html">Watches</a>
+                      </div> 
+
+                      <div class="button-nav grid-button" >
+                        <a href="events.html">Events</a>
+                      </div>
+
+                      <div class="button-nav grid-button" >
+                        <a href="about_us.html">About</a>
+                      </div>
+
+                      <div class="button-nav grid-button" >
+                        <a href="contact.html">Contact</a>
+                      </div>
+                 </div>
+
+                 <div class="button-nav grid-col-1of6 icon-on-nav ">
+
+                            <div class="shopping-bag">  
+                                <span onclick="openCart()"><img src="img/cart.png" alt="cart-icon" title="Shopping Bag" class="icon"></span> 
+                            </div> 
+
+                            <div class="account-icon">
+                                  <a id="none-a" href="login.html"><img src="img/account.png" alt="account-icon" title="Account" class="icon"></a>
+                            </div> 
+
+                            <div class="search"> 
+                                  <span onclick="openSearch()"><img src="img/search.png" alt="search-icon" class="icon" title="search"></span>
+                            </div>
+                  </div>
+       </div>
+       <!-- <End o FIXED HORIZONTAL NAVIGATION > -->
+
+
+      <section> <!-- sidenave will replace the nav when using smaller screen-->
+          <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <div class="side-nav-small">
+                    <a href="index.html"><h2>CHRON</h2></a>
+                    <a href="product_list.html">Watches</a>
+                    <a href="events.html">Events</a>
+                    <a href="about_us.html">About</a> 
+                    <a href="login.html">Account</a> 
+                    <a href="#"><span onclick="openCart()">Shopping Cart</span></a>
+                </div>
+          </div>
+      </section>
+    <section> <!-- search sidebar will appear while clicking the search icon -->
+            <div id="mySearch" class="sidesearch">
+                   <a href="javascript:void(0)" class="closebtn" onclick="closeSearch()">&times;</a>
+                   <h3 class="big-title">Search</h3>
+                   <div class="sideSearch-container">
+                        <form action="#" class="input_form"> 
+                        <h3 id="sideSearch-info">Enter Your Search Below</h3>
+                        <input type="text" name=" 1" Placeholder="New Arrivals" class="input_account"> </form>
+                        <button type="button" class="search-button">Search</button>
+                  </div>
+            </div>
+      </section> <!-- End of search sider bar -->
+
+            <!-- Use hamburger icon to open the sidenav -->
+            <div class="hamburger">
+                  <span onclick="openNav()"><img src="img/burger.png" alt="hamburger-icon" title="hamburger"></span>
+                  <a href="index.html"><p class="small-logo">CHRON</p></a>
+            </div>
+             
+            <!--  icons with small screen size -->
+            <div class="search-small">  
+                   <span onclick="openSearch()"><img src="img/search.png" class="search" alt="search-icon" title="search"></span> 
+            </div> 
+
+      <!-- side bar shopping cart -->
+      <section> 
+          <div id="myCart" class="sidecart"> 
+                <a href="javascript:void(0)" class="closebtn" onclick="closeCart()">&times;</a> 
+                <h3 class="big-title">Shopping Cart (1)</h3>
+                <div class="sideSearch-container">
+
+                      <div class="cart-small">
+                            <img src="img/PDP_watch_1.jpg"  alt="placeholder image">
+                      </div>
+                      <div class="cart_title">
+                           <h3>Product Name</h3>
+                           <h2 class="price">Rosendahl</h2>
+                      </div>
+
+                      <div class="cart_title">
+                          <h3>Quantity</h3>
+                          <form action="#" class="input_form"> 
+                          <input type="text" name=" 1" Placeholder="1"> </form>
+                      </div>
+
+                      <div class="cart_title" id="price">
+                           <h3>Total Price</h3>
+                           <h2 class="price">165 CAD</h2>
+                      </div>
+
+                      <div id="cart-check-out"> 
+                          <form method="get" action="login.html">
+                          <button type="submit" onclick="login.html" class="">Check Out</button>
+                          </form>
+                      </div>
+
+                  </div>
+            </div>
+      </section>  <!-- End of side bar shopping cart -->
+
+
+
+<section>
+
+  <div class="grid-row" id="product-intro">
+
+     <div class="grid-col-1of2" id="product-image">
+        <div class="pdp-container">
+          <img id="big-image" class="img-pdp" src="img/PDP_watch_1.jpg" alt="placeholder image">
+      </div> 
+
+     <div class="image-list-container">
+         <div class="grid-col-1of4 prodcut-slider"><img class="img-pdp" src="img/PDP_watch_1.jpg" onclick="showImage('img/PDP_watch_1.jpg');" alt="placeholder image" ></div>
+         <div class="grid-col-1of4 prodcut-slider"> <img class="img-pdp" src="img/PDP_watch_2.jpg" onclick="showImage('img/PDP_watch_2.jpg');" alt="placeholder image" ></div>
+         <div class="grid-col-1of4 prodcut-slider"><img class="img-pdp" src="img/PDP_watch_3.jpg" onclick="showImage('img/PDP_watch_3.jpg');" alt="placeholder image" ></div>
+         <div class="grid-col-1of4 prodcut-slider">  <img class="img-pdp" src="img/PDP_watch_4.jpg" onclick="showImage('img/PDP_watch_4.jpg');" alt="placeholder image" ></div>
+     </div>
+    </div>
+    
+
+    <div class="grid-col-1of2" id="product-text">
+     
+            <div class="grid=col-1of2 product-info">
+                <h1>Rosendahl</h1>
+                <h3>30mm</h3>
+                <h3>CAD 165</h3>
+                <div id="add-to-cart-container">
+                      <a href="#popup-screen">ADD TO CART</a>  
+            </div>
+            
+
+             <!-- description -->
+
+            <div id="description">
+                <p >The Picto watch is a Danish design classic that aims to capture a picture of time. </p>
+                <p >Taking its name from the word “pictogram”, the Picto marks the hours with a steel dot affixed to a rotating watch face. The minute hand moves as normal. </p>
+                <p >The dot appears to move around the dial to depict the earth moving and time passing. </p>
+                <p >The minimal watch face doesn’t feature indices, date windows or branding – but it does come in a wide variety of colours. </p>
+                <p >The black dial is paired with a black stainless-steel 30mm case, a black rubber strap and a hardened mineral glass lens.  </p>
+
+                <p >Its unique mechanism is powered by a Japanese Quartz movement, and has earned the watch a place in the permanent collection at New York’s Museum of Modern Art. </p>
+            </div>
+
+            <div id="delivery">
+                        <p>All our watches are shipped worldwide free of charge, via a tracked service and require a signature upon delivery. We ship via UPS to UK mainland addresses, and via FedEx for the EU and rest of the world.</p>
+                        <p>Express delivery options are available at the checkout for customers in the UK and USA, charged at £5 for UK Express next working day, and £10 for USA Express next working day delivery. Express delivery orders must be placed before 1pm GMT for same day dispatch. Any orders placed after 1pm GMT, over the weekend or on a UK bank holiday will be dispatched the next working day.</p>
+                        <p>Unfortunately we are currently unable to accept orders with PO box and APO addresses.</p>
+            </div>
+
+             <div class="tab">
+              
+
+                      <div class="tab-item grid-col-1of2">
+                      <div id="des-bottom"><h3 onclick="show();">Description</h3></div>
+                      </div>
+
+                      <div class="tab-item grid-col-1of2">
+                      <div id="delivery-bottom"><h3 onclick="showDetail1()">Delivery</h3></div>
+                      </div>
+
+              </div>
+        </div> 
+    </div>
+  </div>    
+
+</section>
+
+
+<section>
+
+  <!-- first part -->
+ <div class="grid-row">
+          <div class="detail-left-half grid-col-1of2"> 
+                <img src="img/watch100.jpg" alt="camera image">
+           </div>
+           <div class="detail-right-half grid-col-1of2">
+                  
+                  <h1>"Rosendahl" series</h1>
+                  <p> Danish homeware brand Rosendahl began adapting wall clocks by modernist architect Arne Jacobsen into wristwatches after his death in 1971.</p>
+                  <p>READ MORE</p>
+           </div> 
+
+           <hr class="mobile">
+
+</div>
+
+<!-- second part -->
+
+  <div class="grid-row">
+          <div class="detail-second-left-half grid-col-1of2">
+                  
+                  <h1>About the brand</h1>
+                  <p> Chron is one of the world's most popular and influential watch store, we sell more than 30 brands of watches which are from all over the world. </p>
+                  <p> Our mission is simple: to bring you a carefully edited selection of the best designed watches in the world and live in a easy way of life.</p>
+
+            </div>
+                  
+             <div class="detail-second-right-half grid-col-1of2"> 
+                  <img src="img/watch56.jpg" alt="camera image">
+            </div> 
+        </div>
+
+</section>
+
+<!-- review part-->
+
+<section>
+    <div class="grid-row">
+        <div class="grid-col-12of12 review-header">
+          <h2>Reviews</h2>
+        </div>
+     </div>
+
+    <div class="grid-row comment">
+            <div class="grid-col-11of12 review">
+               <div class="grid-col-1of4">  
+                    <span>★ </span><span>★ </span><span>★ </span><span>★ </span><span>☆</span> 
+                    <p>Chloe Bart<br>
+                    2 days ago</p>
+                </div>
+
+                <div class="grid-col-3of4"> 
+                    <p>The latest collection is super fresh - wonderful designs. It will make a great addition to my outfit. Ultra-quick delivery. Full support! Looking forward to the next card deck that comes out!</p>
+                </div>
+            </div>
+    </div>
+    <div class="grid-row comment">
+            <div class="grid-col-11of12 review">
+                  <div class="grid-col-1of4">     
+                  <span>★ </span><span>★ </span><span>★ </span><span>★ </span><span>☆</span> 
+                    <p>Ben Drake<br>
+                    5 days ago</p>
+                  </div>
+                  <div class="grid-col-3of4"> 
+                      <p>Chron is awesome. I was browsing through Elle magazine when I stumbled upon this Simply designed watch. I rolled through Amsterdam last week for a shoot and decided to pick them up - cool people! You can bet that my eyes are on the next collection.</p>
+                  </div>
+            </div>
+     </div>
+     <div class="grid-row comment">
+          <div class="grid-col-11of12 review">
+                <div class="grid-col-1of4">  
+                    <span>★ </span><span>★ </span><span>★ </span><span>★ </span><span>☆</span> 
+                     <p>Andy Kwan<br>6 days ago</p>
+                </div>
+                <div class="grid-col-3of4"> 
+                            <p>I’ve always been a big fan minimalism - so it’s cool to see some of these shapes making their way onto a watch. Great concept, cool designs - just good clean fun.</p>
+                </div>
+          </div>
+      </div>
+
+      <div class="grid-row comment">
+                <div class="grid-col-3of4">
+                  <div class="grid-col-3of4 leave-review">
+                        <textarea rows="3"> </textarea>
+                  </div>
+                </div>
+                <div class="grid-col-1of4">
+                   <button class="review-button" type="button">LEAVE A REVIEW</button>
+                </div>
+      </div>
+      
+
+</section>
+
+<!--  popup screen after clicking  -->
+      <div id="popup-screen">
+               <h1 class="big-title">YOUR ITEM HAS BEEN ADDED TO CART!</h1>
+                   <p>Product: Rosendahl<p> 
+                   <p>Amount: 1</p>
+                   <p>Total price: CAD 165</p>
+               <form method="get" action="login.html">
+                    <button type="submit" onclick="login.html" class="">CHECK OUT</button>
+               </form>
+                    <a href="#">Edit Your Order?</a>
+                    <a href="#" class="cancel">&times;</a>
+      </div>
+
+      <!-- black overlay -->
+      <div id="cover"></div> 
+
+
+<!-- !-- Footer Content-->      
+       <section>
+             <div class="grid-row">
+                   <div class="grid-col-12of12 grey-bg">
+                           <ul class="footer-ul">
+                                <li class="footer-component"><a href = "#">FQA</a></li>
+                                <li class="footer-component"><a href = "#">RETURNS</a></li>
+                                <li class="footer-component"><a href = "#">SHIPPING</a></li>
+                                <li class="footer-component"><a href = "#">CONTACT</a></li>
+                                <li class="footer-component"><a href = "#">STORE FINDER</a></li>
+                           </ul>
+                    </div>
+
+                          <div class="grid-col-12of12 grey-bg">
+                      <div class= "footer-icons">
+                          <div class="center-container">
+                              <div class="icon">
+                                <img src="img/FacebookFilled.png" alt="fb-icon" title="facebook-icon">
+                              </div>
+                              <div class="icon">
+                                <img src="img/InstagramFilled.png" alt="ins-icon" title="instagram-icon">
+                              </div>
+
+                              <div class="icon">
+                                <img src="img/SnapchatFilled.png" alt="snap-icon" title="snapchat-icon">
+                              </div>
+
+                              <div class="icon">
+                                <img src="img/PinterestFilled.png" alt="pin-icon" title="pinterest-icon">
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+
+
+                     <div class="grid-col-12of12 grey-bg">       
+                           <ul class="footer-ul">
+                              <li class="footer-reference"><a href="http://www.sfu.ca/~vji/IAT339/styleguide_CHRON/styleguide_CHRON.html">STYLE GUIDE</a></li>
+                              <li class="footer-reference">|</li>
+                              <li class="footer-reference"><a href="citation.html">CITATIONS</a></li>
+                              <li class="footer-reference">|</li>
+                              <li class="footer-reference"><a href="http://github.com/vic339/PO2">REPOSITORY</a></li>
+                           </ul>
+                      </div>
+
+             </div> 
+
+             <!-- icons for social media -->
+             
+             
+               
+
+              <!--  content for Andrew and Ethan -->
+              
+                   
+              
+
+          </section> 
+          <!-- End of Footer Content-->     
+        <script src="js/sidebar.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+        function show(){
+          document.getElementById("description").style.display= "block";
+          document.getElementById("delivery").style.display= "none"; 
+          document.getElementById("des-bottom").style.borderBottom= "2px solid black";
+          document.getElementById("delivery-bottom").style.borderBottom= "";
+                  // document.getElementById("des-bottom").style.border= "2px";
+        }
+       
+         function showDetail1(){
+          document.getElementById("delivery").style.display= "block";
+          document.getElementById("description").style.display= "none";
+          document.getElementById("delivery-bottom").style.borderBottom= "2px solid black";
+            document.getElementById("des-bottom").style.borderBottom= "";
+         
+        }
+
+        function showImage(image){
+        var bigImage=document.getElementById("big-image");
+        bigImage.src=image;
+
+        }
+
+        </script>
+
+  </body>
+</html>
